@@ -1,6 +1,7 @@
 .newsletter:focus {
     outline: none;
 }
+
 .persistcontent {
     height: auto;
     display: flex;
@@ -47,8 +48,11 @@
     border-radius: 9px;
     background-color: #57B894;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     transition: .1s;
+}
+.newsletter + .newsletter {
+    margin-bottom: 40px;
 }
 .newsletter:hover {
     border: solid 2px #336653;
@@ -67,6 +71,17 @@
 .ui2 {    
     display: none;
  }
+.emailbox {
+    background-color: transparent;
+    border: solid 2px #57B894;
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0;
+    height: 56px;
+    transition: .1s;
+}
 @media (max-width:226px) {
     .ui{
         transition: .1s;
@@ -120,6 +135,10 @@
     }
     .ui{
         display: none;
+    }
+    .emailbox {
+        // padding: 0 16px;
+        height: 20px;
     }
 }
 
