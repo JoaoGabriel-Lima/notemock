@@ -54,7 +54,7 @@
 .newsletter + .newsletter {
     margin-bottom: 40px;
 }
-.newsletter:hover {
+.newsletter:hover, .newsletter:focus {
     border: solid 2px #336653;
 }
 .newsletter a {
