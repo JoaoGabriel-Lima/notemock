@@ -1,28 +1,26 @@
-import styles from './styles.module.scss';
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import styles from './styles.module.scss'
+import styless from './components/maintenance_body/styles.module.scss'
 
+import BodyMaintenance from './components/maintenance_body/body'
+// import styles2 from './styles2.module.css'
 
-function WelcomePage() {
-    <script src="https://use.fontawesome.com/abf374a426.js"></script>
-    return <div className={styles.main}>
-        <div id={styles.navigation_bar}>
-            <div className={styles.options}>
-                <img className={styles.logo} src='/logo/logo2.png'/>
-                <FontAwesomeIcon icon={faBars} className={styles.menu} />
-            </div>
-        </div>
-        <div id={styles.center_content}>
-            <h1 id={styles.main_title}>A new way to <span className={styles.gradient_text}>share text</span>.</h1>
-            <h2 className={styles.lightItalic}>One tool, thousands of possibilities</h2>
+function Maintenance() {
+    return <div id={styles.main}>
+        <h1 className={styles.logo}>Note<span className={styles.mock}>mock</span>.</h1>
 
-            <div className={styles.buttons}>
-                <button className={styles.btn_default}><a href="">Start Now</a></button>
-                <button className={styles.btn_default}><a href="">Learn More</a></button>
-            </div>
+        <div id={styles.contentdiv}>
+            <BodyMaintenance 
+            desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit."
+            title={["Site ainda em ", <strong>Desenvolvimento</strong>]}
+            btn="Me avise quando estiver pronto"
+            src1="/img/ui.png"
+            src2="/img/ui2.png"
+            input={<input className={[styless.newsletter, styless.emailbox].join(' ')} placeholder="Seu endereço de email" type="email"></input>}
+            />
         </div>
     </div>
 }
 
-export default WelcomePage;
+export default Maintenance;
+
+//a
