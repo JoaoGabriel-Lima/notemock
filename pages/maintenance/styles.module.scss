@@ -4,6 +4,7 @@
     font-family: 'Coolvetica';
     src: local('Coolvetica'), url('/src/fonts/coolvetica-regular.ttf') format('ttf');
 }
+
 #main {
     overflow: auto;
     height: 100%;
@@ -30,43 +31,32 @@
     // justify-content: center;
 }
 
-.title {
-    text-align: center;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 10.6vw;
-    margin-bottom: 0px;
-    width: 100vw;
+@media (max-width:226px) {
+    .logo {
+        transition: .1s;
+        font-size: 19vw;
+    }
 }
-.bold {
-    font-weight: 600;
-}
-.description {
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    width: 93vw;
-    margin-bottom: 30px;
-}
-.newsletter {
-    border: 0;
-    padding: 20px 0;
-    width: 90vw;
-    // height: 53px !important;
-    
-    border-radius: 9px;
-    background-color: #57B894;
-    cursor: pointer;
-    margin-bottom: 40px;
-}
-.newsletter a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    font-family: 'Roboto';
-    font-weight: 500;
-}
-.ui{
-    padding-bottom: 60px;
+
+
+@media (min-width:953px){
+    #contentdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: center;
+    }
+    #main {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: flex-start;
+    }
+    .logo {
+        font-family: 'Coolvetica';
+        font-size: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+        color: #3F3D56;
+    }
 }
