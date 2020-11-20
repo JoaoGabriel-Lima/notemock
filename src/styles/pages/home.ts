@@ -13,7 +13,7 @@ export const Container = styled.div`
     height: 100vh;
     width: 100vw;
 
-    overflow: hidden;
+    overflow: auto;
     /* height: 100%; */
     display: flex;
     flex-direction: column;
