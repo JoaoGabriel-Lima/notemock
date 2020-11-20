@@ -21,6 +21,7 @@ export default function Home() {
           btn="Me avise quando estiver pronto"
           src1={hand}
           src2={flower}
+          redirect="/congratulations"
           input={<input className="newsletter emailbox" placeholder="Seu endereço de email" type="email"></input>}
         />
       </div>

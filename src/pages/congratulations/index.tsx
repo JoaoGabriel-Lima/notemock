@@ -3,8 +3,8 @@ import Head from 'next/head'
 import {Container} from '../../styles/pages/home'
 import MaintenanceBody from "../../components/MaintenanceBody"
 
-import hand from "../../assets/ui2.svg"
 import flower from "../../assets/ui.svg"
+import thanku from "../../assets/ui-thanku.svg"
 
 export default function Home() {
   return (
@@ -17,10 +17,11 @@ export default function Home() {
       <div id="contentdiv">
         <MaintenanceBody 
           desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit."
-          title={["Site ainda em ", <strong>Desenvolvimento</strong>]}
-          btn="Me avise quando estiver pronto"
-          src1={hand}
-          src2={flower}
+          title={["Obrigado! Você será avisado de cada ", <span className="mock">atualização</span>, "!"]}
+          btn="Me leve para a página inicial"
+          src1={thanku}
+          src2={thanku}
+          redirect="/"
         //   input={<input className="newsletter emailbox" placeholder="Seu endereço de email" type="email"></input>}
         />
       </div>

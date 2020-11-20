@@ -8,13 +8,15 @@ function MaintenanceBody(props) {
                 <h1 className="title">{props.title}</h1>
                 <p className="description">{props.desc}</p>
 
-                {props.input}
-                
-                <Link href="/congratulations">
-                    <button className="newsletter">
-                        <a>{props.btn}</a>
-                    </button>
-                </Link>
+                <form className="maxsize">
+                    {props.input}
+                    
+                    <Link href={props.redirect}>
+                        <button className="newsletter">
+                            <a>{props.btn}</a>
+                        </button>
+                    </Link>
+                </form>
 
                 <img className="ui" src={props.src1}></img>
             </div>

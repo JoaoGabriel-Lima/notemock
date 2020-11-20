@@ -5,6 +5,13 @@ export const MaintenanceContainer = styled.div`
     .newsletter:focus {
         outline: none;
     }
+    .maxsize {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .persistcontent {
         height: auto;
@@ -53,9 +60,9 @@ export const MaintenanceContainer = styled.div`
         margin-bottom: 10px;
         transition: .1s;
     }
-    .newsletter + .newsletter {
+    /* .newsletter + .newsletter {
         margin-bottom: 40px;
-    }
+    } */
     .newsletter:hover, .newsletter:focus {
         border: solid 2px #336653;
     }
@@ -67,6 +74,7 @@ export const MaintenanceContainer = styled.div`
         font-weight: 500;
     }
     .ui{
+        margin-top: 40px;
         padding-bottom: 60px;
     }
 
@@ -102,6 +110,7 @@ export const MaintenanceContainer = styled.div`
 
     @media (min-width:953px){
             height: 100%;
+
         .persistcontent {
             height: 100%;
             display: flex;
