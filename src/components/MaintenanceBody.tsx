@@ -28,7 +28,7 @@ function MaintenanceBody(props) {
         }
     }
     function notifyButton(){
-        var btnnl = document.getElementById('buttonnl');
+        var btnnl = (document.getElementById('buttonnl') as HTMLButtonElement);
         btnnl.disabled = true;
         setTimeout(function () {
             btnnl.disabled = false;
