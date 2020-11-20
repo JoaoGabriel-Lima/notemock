@@ -11,9 +11,10 @@ function MaintenanceBody(props) {
     function verifyEmail(e) {
         e.preventDefault()
         var emailinput = document.getElementsByClassName('emailbox')
-        var emailinputvalue = ((document.getElementsByClassName('emailbox')[0] as HTMLInputElement).value);
+        
 
         if (emailinput.length > 0) {
+            var emailinputvalue = ((document.getElementsByClassName('emailbox')[0] as HTMLInputElement).value);
             if(emailinputvalue == "") {
                 notifyButton()
             } else if (validateEmail(emailinputvalue)){
@@ -23,7 +24,7 @@ function MaintenanceBody(props) {
                 notifyButton()
             }
         } else {
-            // console.log("Não tem nada")
+            console.log("Não tem nada")
             router.push("/")
         }
     }
