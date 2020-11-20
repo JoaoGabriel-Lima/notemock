@@ -21,6 +21,8 @@ export default function Home() {
           btn="Me leve para a página inicial"
           src1={thanku}
           src2={thanku}
+          desktop="thankdesktop"
+          mobile="ui thankmobile"
           redirect="/"
         //   input={<input className="newsletter emailbox" placeholder="Seu endereço de email" type="email"></input>}
         />

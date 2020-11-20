@@ -77,8 +77,15 @@ export const MaintenanceContainer = styled.div`
         margin-top: 40px;
         padding-bottom: 60px;
     }
+    .thankmobile {
+        width: 65%;
+    }
 
     .ui2 {    
+        display: none;
+    }
+
+    .thankdesktop {
         display: none;
     }
 
@@ -127,6 +134,13 @@ export const MaintenanceContainer = styled.div`
             margin-right: 90px;
             transition: .1s;
         }
+        .thankdesktop {
+            display: block;
+            width: 40vw;
+            margin-right: 90px;
+            margin-left: 45px;
+            transition: .1s;
+        }
         .title {
             text-align: left;
             font-family: 'Roboto';
@@ -159,10 +173,22 @@ export const MaintenanceContainer = styled.div`
         .ui2 {
             width: 650px;
         }
+        .thankdesktop {
+            width: 550px;
+        }
     }
     @media (max-width:1036px) {
         .ui2 {
             margin-right: 50px;
+        }
+        .thankdesktop {
+            margin-right: 50px;
+            margin-left: 45px;
+        }
+    }
+    @media (min-width:1300px) {
+        .thankdesktop {
+            margin-left: 8vw;
         }
     }
 `

@@ -3,7 +3,7 @@ import {MaintenanceContainer} from '../styles/components/maintenanceBody'
 function MaintenanceBody(props) {
     return (
         <MaintenanceContainer>
-            <img src={props.src2} alt="" className="ui2"/>
+            <img src={props.src2} alt="" className={props.desktop}/>
             <div className="persistcontent">
                 <h1 className="title">{props.title}</h1>
                 <p className="description">{props.desc}</p>
@@ -18,7 +18,7 @@ function MaintenanceBody(props) {
                     </Link>
                 </form>
 
-                <img className="ui" src={props.src1}></img>
+                <img className={props.mobile} src={props.src1}></img>
             </div>
         </MaintenanceContainer>
     )
