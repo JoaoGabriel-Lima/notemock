@@ -22,7 +22,7 @@ export default function Home() {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: .2
+              delay: 0.1
             }
           },
         }}>

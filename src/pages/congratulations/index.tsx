@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {AnimatePresence} from "framer-motion"
 import {Container} from '../../styles/pages/home'
 import {motion} from 'framer-motion'
 import MaintenanceBody from "../../components/MaintenanceBody"
@@ -12,16 +13,16 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <h1 className="logo">Note<span className="mock">mock</span>.</h1>
-        <motion.div id="contentdiv" initial="hidden" animate="visible" variants={{
+        <motion.div id="contentdiv" initial="hidden" animate="visible" exit={{ opacity: 0 }} variants={{
           hidden: {
-            scale: 1,
+            scale: 1.4,
             opacity: 0
           },
           visible: {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: .2
+              delay: .1
             }
           },
         }}>
@@ -38,6 +39,5 @@ export default function Home() {
           />
         </motion.div>
       </Container>
-    // </motion.div>
   )
 }
