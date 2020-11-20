@@ -28,7 +28,7 @@ export default function Home() {
         }}>
           <MaintenanceBody 
             title={["Obrigado! Você será avisado de cada ", <span className="mock">atualização</span>, "!"]}
-            desc="Muito obrigado por mostrar apoio á este projeto incrível, através desta simples ação você nos ajuda a continuar oferecendo suporte e nos motiva a continuar. Até a próxima 👋💚" 
+            desc="Muito obrigado por mostrar apoio á este projeto incrível, através desta simples ação você nos ajuda a continuar oferecendo suporte e nos motiva a continuar. Até a próxima 👋😊" 
             btn="Me leve para a página inicial"
             src1={thanku}
             src2={thanku}
