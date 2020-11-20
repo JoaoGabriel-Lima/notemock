@@ -13,6 +13,8 @@ export const MaintenanceContainer = styled.div`
         align-items: center;
     }
 
+
+
     .persistcontent {
         height: auto;
         display: flex;
@@ -59,6 +61,15 @@ export const MaintenanceContainer = styled.div`
         cursor: pointer;
         margin-bottom: 10px;
         transition: .1s;
+    }
+    #buttonnl:disabled {
+        transition: .1s;
+        background-color: #B85658;
+        border: 0
+    }
+    #buttonnl:disabled:hover, #buttonnl:disabled:focus {
+        background-color: #B85658;
+        border: solid 2px #663334;
     }
     /* .newsletter + .newsletter {
         margin-bottom: 40px;

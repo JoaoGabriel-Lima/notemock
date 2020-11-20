@@ -1,6 +1,39 @@
 import Link from 'next/link'
+import { Router, useRouter } from 'next/router'
 import {MaintenanceContainer} from '../styles/components/maintenanceBody'
 function MaintenanceBody(props) {
+    const router = useRouter()
+    function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    function verifyEmail(e) {
+        e.preventDefault()
+        var emailinput = document.getElementsByClassName('emailbox')
+
+        if (emailinput.length > 0) {
+            if(emailinput[0].value == "") {
+                notifyButton()
+            } else if (validateEmail(emailinput[0].value)){
+                console.log("Ok!")
+                router.push("/congratulations")
+            } else {
+                notifyButton()
+            }
+        } else {
+            // console.log("Não tem nada")
+            router.push("/")
+        }
+    }
+    function notifyButton(){
+        var btnnl = document.getElementById('buttonnl');
+        btnnl.disabled = true;
+        setTimeout(function () {
+            btnnl.disabled = false;
+        }, 1150);
+    
+    }
     return (
         <MaintenanceContainer>
             <img src={props.src2} alt="" className={props.desktop}/>
@@ -11,17 +44,18 @@ function MaintenanceBody(props) {
                 <form className="maxsize">
                     {props.input}
                     
-                    <Link href={props.redirect}>
-                        <button className="newsletter">
+                    
+                        <button className="newsletter" id="buttonnl" onClick={verifyEmail}>
                             <a>{props.btn}</a>
                         </button>
-                    </Link>
+                    
                 </form>
 
                 <img className={props.mobile} src={props.src1}></img>
             </div>
         </MaintenanceContainer>
     )
+
 }
 
 export default MaintenanceBody;
