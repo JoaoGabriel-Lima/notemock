@@ -28,7 +28,7 @@ export default function Home() {
         }}>
         <MaintenanceBody 
           desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit."
-          title={["Site ainda em ", <strong>Desenvolvimento</strong>]}
+          title={["Site ainda em ", <span className="bold">Desenvolvimento</span>]}
           btn="Me avise quando estiver pronto"
           src1={hand}
           src2={flower}

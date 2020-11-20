@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="logo">Note<span className="mock">mock</span>.</h1>
         <motion.div id="contentdiv" initial="hidden" animate="visible" exit={{ opacity: 0 }} variants={{
           hidden: {
-            scale: 1.4,
+            scale: 1,
             opacity: 0
           },
           visible: {
