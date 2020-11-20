@@ -1,8 +1,7 @@
 import Head from 'next/head'
-// import styles from '../styles/Home.module.css'
+import {motion} from 'framer-motion'
 import {Container} from '../styles/pages/home'
 import MaintenanceBody from "../components/MaintenanceBody"
-
 import hand from "../assets/ui2.svg"
 import flower from "../assets/ui.svg"
 
@@ -14,7 +13,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="logo">Note<span className="mock">mock</span>.</h1>
-      <div id="contentdiv">
+      <motion.div id="contentdiv" initial="hidden" animate="visible" variants={{
+          hidden: {
+            scale: 1,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: .2
+            }
+          },
+        }}>
         <MaintenanceBody 
           desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit."
           title={["Site ainda em ", <strong>Desenvolvimento</strong>]}
@@ -26,7 +37,7 @@ export default function Home() {
           redirect="/congratulations"
           input={<input className="newsletter emailbox" placeholder="Seu endereço de email" type="email"></input>}
         />
-      </div>
+      </motion.div>
     </Container>
   )
 }
