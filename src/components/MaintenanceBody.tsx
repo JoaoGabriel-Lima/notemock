@@ -11,11 +11,12 @@ function MaintenanceBody(props) {
     function verifyEmail(e) {
         e.preventDefault()
         var emailinput = document.getElementsByClassName('emailbox')
+        var emailinputvalue = (document.getElementsByClassName('emailbox')[0]).value;
 
         if (emailinput.length > 0) {
-            if(emailinput[0].value == "") {
+            if(emailinputvalue == "") {
                 notifyButton()
-            } else if (validateEmail(emailinput[0].value)){
+            } else if (validateEmail(emailinputvalue)){
                 console.log("Ok!")
                 router.push("/congratulations")
             } else {
