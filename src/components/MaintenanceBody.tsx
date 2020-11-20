@@ -18,13 +18,13 @@ function MaintenanceBody(props) {
             if(emailinputvalue == "") {
                 notifyButton()
             } else if (validateEmail(emailinputvalue)){
-                console.log("Ok!")
+                // console.log("Ok!")
                 router.push("/congratulations")
             } else {
                 notifyButton()
             }
         } else {
-            console.log("Não tem nada")
+            // console.log("Não tem nada")
             router.push("/")
         }
     }

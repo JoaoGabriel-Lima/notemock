@@ -27,8 +27,8 @@ export default function Home() {
           },
         }}>
           <MaintenanceBody 
-            desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit."
             title={["Obrigado! Você será avisado de cada ", <span className="mock">atualização</span>, "!"]}
+            desc="Muito obrigado por mostrar apoio á este projeto incrível, através desta simples ação você nos ajuda a continuar oferecendo suporte e nos motiva a continuar. Até a próxima 👋💚" 
             btn="Me leve para a página inicial"
             src1={thanku}
             src2={thanku}
