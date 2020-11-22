@@ -5,6 +5,7 @@ import {motion} from 'framer-motion'
 import MaintenanceBody from "../../components/MaintenanceBody"
 import thanku from "../../assets/ui-thanku.svg"
 
+
 export default function Home() {
   return (
       <Container>

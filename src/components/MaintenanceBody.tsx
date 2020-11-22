@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Router, useRouter } from 'next/router'
+import axios from 'axios';
 import {MaintenanceContainer} from '../styles/components/maintenanceBody'
 function MaintenanceBody(props) {
     const router = useRouter()
@@ -18,7 +19,7 @@ function MaintenanceBody(props) {
             if(emailinputvalue == "") {
                 notifyButton()
             } else if (validateEmail(emailinputvalue)){
-                // console.log("Ok!")
+                axios.post('/api/subscribe', {email: emailinputvalue})
                 router.push("/congratulations")
             } else {
                 notifyButton()
@@ -33,7 +34,7 @@ function MaintenanceBody(props) {
         btnnl.disabled = true;
         setTimeout(function () {
             btnnl.disabled = false;
-        }, 1150);
+        }, 1550);
     
     }
     return (
