@@ -31,21 +31,23 @@ export default async (request: NowRequest, response: NowResponse) => {
 
     const collection = db.collection('subscribers')
 
-    collection.find({ email: email }).toArray(async function (err, results) {
+    await collection.find({ email: email }).toArray(async function (err, results) {
         if (results.length > 0) {
             console.log("já tem");
+            return response.status(201).json({ ok: true, tem: true})
         } else if(email == null) {
-
+            return response.status(201).json({ ok: false})
         } else {
             await collection.insertOne({
                 email,
                 subscribedAt: new Date(),
             });
+            return response.status(201).json({ ok: true, tem: false})
         }// output all records
     });
     
-
+    
 
     
-    return response.status(201).json({ ok: true})
+    
 }
