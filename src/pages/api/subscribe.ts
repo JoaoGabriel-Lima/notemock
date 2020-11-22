@@ -33,7 +33,6 @@ export default async (request: NowRequest, response: NowResponse) => {
 
     await collection.find({ email: email }).toArray(async function (err, results) {
         if (results.length > 0) {
-            console.log("já tem");
             return response.status(201).json({ ok: true, tem: true})
         } else if(email == null) {
             return response.status(201).json({ ok: false})
@@ -45,9 +44,4 @@ export default async (request: NowRequest, response: NowResponse) => {
             return response.status(201).json({ ok: true, tem: false})
         }// output all records
     });
-    
-    
-
-    
-    
 }
