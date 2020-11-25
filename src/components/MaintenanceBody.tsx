@@ -46,12 +46,9 @@ function MaintenanceBody(props) {
 
                 <form className="maxsize">
                     {props.input}
-                    
-                    
                         <button className="newsletter" id="buttonnl" onClick={verifyEmail}>
                             <a>{props.btn}</a>
-                        </button>
-                    
+                        </button> 
                 </form>
 
                 <img className={props.mobile} src={props.src1}></img>
