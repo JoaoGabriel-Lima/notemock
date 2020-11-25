@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const MaintenanceContainer = styled.div`
 
+    /* *{
+        transition: all .1s;
+    } */
     .newsletter:focus {
         outline: none;
     }
@@ -60,7 +63,7 @@ export const MaintenanceContainer = styled.div`
         background-color: #57B894;
         cursor: pointer;
         margin-bottom: 10px;
-        transition: .1s;
+        transition: all .1s;
     }
     #buttonnl:disabled {
         transition: .1s;
@@ -76,6 +79,7 @@ export const MaintenanceContainer = styled.div`
     } */
     .newsletter:hover, .newsletter:focus {
         border: solid 2px #336653;
+        transition: all .1s;
     }
     .newsletter a {
         color: white;
